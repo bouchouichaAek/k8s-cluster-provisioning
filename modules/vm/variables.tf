@@ -28,7 +28,7 @@ variable "address_prefixes" {
 }
 
 variable "subnet_id" {
-  description = "The ID of the subnet where the master node will be deployed."
+  description = "The ID of the subnet where the node will be deployed."
   type        = string
 }
 
