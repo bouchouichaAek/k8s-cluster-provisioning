@@ -10,10 +10,10 @@ No providers.
 
 ## Modules
 
-| Name                                                                                                                          | Source                      | Version |
-| ----------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------- |
-| <a name="module_network"></a> [network](https://github.com/bouchouichaAek/k8s-cluster-provisioning/tree/main/modules/network) | ./modules/network/README.md | n/a     |
-| <a name="module_vms"></a> [vms](https://github.com/bouchouichaAek/k8s-cluster-provisioning/tree/main/modules/vm)              | ./modules/vm/README.md      | n/a     |
+| Name                                                                                                                          | Source            | Version |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------- |
+| <a name="module_network"></a> [network](https://github.com/bouchouichaAek/k8s-cluster-provisioning/tree/main/modules/network) | ./modules/network | n/a     |
+| <a name="module_vms"></a> [vms](https://github.com/bouchouichaAek/k8s-cluster-provisioning/tree/main/modules/vm)              | ./modules/vm      | n/a     |
 
 ## Resources
 
