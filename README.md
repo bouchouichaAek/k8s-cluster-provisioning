@@ -183,7 +183,6 @@ Short-term improvements you can implement quickly:
 - Move secrets out of `terraform.tfvars` to environment variables, use Terraform Cloud variables, or integrate with a secret manager (Azure Key Vault, AWS Secrets Manager, HashiCorp Vault).
 
 - Add support for other cloud providers (AWS, GCP) by refactoring modules into provider-agnostic interfaces and separate provider modules.
-- Add a `bootstrap` module that uses cloud-init to install Python and configure SSH, reducing flakiness when Ansible first connects.
 
 Security & reliability improvements:
 
