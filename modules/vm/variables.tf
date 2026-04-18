@@ -95,9 +95,11 @@ variable "admin_username" {
   description = "The admin username for the VM."
   default     = "azureuser"
 }
-variable "path_ssh" {
+variable "ssh_key_path" {
   description = "The path to the SSH public key."
+  default     = "~/.ssh/id_rsa.pub"
 }
+
 variable "key_data" {
   description = "The SSH public key data."
 }

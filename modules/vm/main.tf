@@ -52,8 +52,8 @@ resource "azurerm_virtual_machine" "k8s_vm" {
   os_profile_linux_config {
     disable_password_authentication = true
     ssh_keys {
-      path     = var.path_ssh
-      key_data = var.key_data
+      path     = "/home/${var.admin_username}/.ssh/authorized_keys"
+      key_data = file(var.key_data)
     }
   }
 }

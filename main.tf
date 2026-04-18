@@ -18,12 +18,11 @@ module "vms" {
   resource_group_name           = var.resource_group_name
   private_ip_address_allocation = var.private_ip_address_allocation
   subnet_id                     = module.network.subnet_id
-  vm_size                       = var.vm_size
+  vm_size                       = each.value
   delete_os_disk                = var.delete_os_disk
   delete_data_disks             = var.delete_data_disks
   admin_username                = var.admin_username
-  path_ssh                      = local.path_ssh
-  key_data                      = local.key_data
+  key_data                      = var.ssh_key_path
   address_prefixes              = var.address_prefixes
   publisher                     = var.publisher
   offer                         = var.offer

@@ -11,3 +11,12 @@ output "worker_public_ips" {
     if k != "master"
   }
 }
+
+
+output "admin_username" {
+  value = var.admin_username
+}
+
+output "ssh_key_path" {
+  value = var.ssh_key_path
+}

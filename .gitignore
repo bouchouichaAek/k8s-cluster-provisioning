@@ -4,3 +4,5 @@ terraform.tfstate.backup
 locals.tf
 .terraform.lock.hcl
 /.terraform
+.vscode
+DOCUMENTATION.md
