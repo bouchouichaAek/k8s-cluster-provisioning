@@ -59,8 +59,7 @@ locals {
 
 Notes:
 
-- To add more worker nodes, add `workerN` entries to `locals.nodes` (or change to a variable-driven pattern if you prefer dynamic scaling).
-- To change VM sizes for all nodes, update the `vm_size` variable in `terraform.tfvars` or change the per-node values in `locals.tf` if modules support per-node sizing.
+- To add more worker nodes, add `workerN` entries to `locals.tf` (or change to a variable-driven pattern if you prefer dynamic scaling), and add the vm size for the worker as well.
 
 Important environment notes for Windows users
 
