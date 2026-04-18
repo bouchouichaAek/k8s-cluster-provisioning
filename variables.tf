@@ -115,3 +115,9 @@ variable "ssh_key_path" {
   description = "The path to the SSH public key."
   default     = "~/.ssh/id_rsa.pub"
 }
+
+variable "nodes" {
+  description = "Optional map of node names to VM sizes. When set, this overrides the default locals.nodes. Example: { master = \"Standard_B2s\" , worker1 = \"Standard_B1s\" }"
+  type        = map(string)
+  default     = {}
+}
