@@ -43,6 +43,25 @@ Repository layout (important files)
 - A Bash-compatible shell on Windows: WSL (recommended) or Git Bash. `setup.sh` is a Bash script.
 - SSH private key accessible to Ansible and referenced by Terraform/outputs.
 
+Additional required file: `locals.tf`
+
+This repository expects a `locals.tf` file to declare node sizes and the initial worker list. If you don't already have a `locals.tf`, create it in the repo root. Example minimal `locals.tf`:
+
+```hcl
+locals {
+  nodes = {
+    master  = "Standard_B2s"
+    worker1 = "Standard_B1s"
+    worker2 = "Standard_B1s"
+  }
+}
+```
+
+Notes:
+
+- To add more worker nodes, add `workerN` entries to `locals.nodes` (or change to a variable-driven pattern if you prefer dynamic scaling).
+- To change VM sizes for all nodes, update the `vm_size` variable in `terraform.tfvars` or change the per-node values in `locals.tf` if modules support per-node sizing.
+
 Important environment notes for Windows users
 
 - The repo assumes a Unix-like shell for `setup.sh`. On Windows run it via WSL or Git Bash. Example from PowerShell:
