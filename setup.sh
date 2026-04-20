@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "Checking for SUDO_PASS..."
 
+private_key_file="~/.ssh/k8s-cluster"
+
 if [[ -z "$SUDO_PASS" ]]; then
   echo "ERROR: SUDO_PASS env variable is not set."
   exit 1
@@ -62,7 +64,7 @@ cat > ansible.cfg << EOF
 [defaults]
 inventory = hosts
 remote_user = $ansible_user
-private_key_file = $ssh_key
+private_key_file = $private_key_file
 host_key_checking = False
 EOF
 
@@ -71,7 +73,7 @@ EOF
 mkdir -p group_vars
 cat > group_vars/all.yml << EOF
 ansible_user: $ansible_user
-ansible_ssh_private_key_file: $ssh_key
+ansible_ssh_private_key_file: $private_key_file
 EOF
 
 echo "✓ hosts file generated"
